@@ -29,3 +29,17 @@ WHERE  FavoriteColor != 'red' and FavoriteColor !=  'Blue'
 WHERE  FavoriteColor = 'orange' or FavoriteColor = 'Green'
 WHERE  FavoriteColor in ('orange', 'Green')
 WHERE  FavoriteColor in ('Yellow', 'Purple')
+
+
+// -----------------------------Order By-------------------------
+
+CREATE TABLE Orders (productName, productPrice, Quantity, personId INTEGER PRIMARY KEY AUTOINCREMENT)
+
+INSERT INTO Orders (productName, productPrice, Quantity) VALUES // if you are doing the auto increment you need to specify which column you want to input those values
+ ('Juice', 15, 20),
+ ('Candy', 50, 100),
+ ('Burrito', 5, 200),
+ ('Beans', 10, 500),
+ ('Cookie', 3, 12);
+
+SELECT SUM(Quantity) FROM orders
