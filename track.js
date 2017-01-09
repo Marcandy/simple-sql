@@ -43,3 +43,26 @@ INSERT INTO Orders (productName, productPrice, Quantity) VALUES // if you are do
  ('Cookie', 3, 12);
 
 SELECT SUM(Quantity) FROM orders
+
+SELECT SUM(productPrice) FROM orders
+
+SELECT productPrice * Quantity FROM orders // multiply two column together
+WHERE personId = 5
+
+//////////////////////////ARTIST
+
+- INSERT INTO Artist (Name)
+Values ('Bal'),
+('Po'),
+('For')
+
+* SELECT * FROM ARTIST
+ORDER BY name desc
+limit 10
+
+* SELECT * FROM ARTIST
+ORDER BY name
+limit 5
+
+SELECT * FROM ARTIST
+WHERE Name like '%Black%'
