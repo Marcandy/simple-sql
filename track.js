@@ -66,3 +66,25 @@ limit 5
 
 SELECT * FROM ARTIST
 WHERE Name like '%Black%'
+
+
+/////////////////// Random ////
+
+Can you return the tallest height for each species? Remember to return the species name next to the height too, like in the example query.
+SELECT MAX(height_cm), species FROM friends_of_pickles
+GROUP BY species
+
+// join
+SELECT character.name, character_actor.actor_name
+FROM character
+INNER JOIN character_actor
+ON character.id = character_actor.character_id
+
+// multiple join
+// https://www.sqlteaching.com/#!multiple_joins
+SELECT character.name, actor.name
+FROM character
+INNER JOIN  character_actor
+ON character.id = character_actor.character_id
+INNER JOIN actor
+ON actor.id = character_actor.actor_id
